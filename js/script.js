@@ -12,13 +12,24 @@ project 1 - A Random Quote Generator
 /***
  * `getRandomQuote` function
 ***/
-
-
+const getRandomQuote = () => {
+  const quotesKey = _getRandomNumber(quotes.length);
+  return quotes[quotesKey];
+}
+/**
+ * Get random number between 0 and max
+ * 
+ * @param {number} max highest number to return
+ * 
+ * @returns {number} returns number between 0 and max
+ */
+const _getRandomNumber = (max) => {
+  return Math.floor(Math.random() * max);
+}
 
 /***
  * `printQuote` function
 ***/
-
 
 
 /***
