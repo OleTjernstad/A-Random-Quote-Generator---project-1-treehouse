@@ -48,12 +48,15 @@ const printQuote = () => {
     ${occupationHtml(quote.occupation)}
     ${citationHtml(quote.citation)}
     ${yearHtml(quote.year)}
-  </p>`;
+  </p>
+  ${ytLinkHtml(quote.YTLink)}`;
 }
 
 /**
  * Add occupation if is present in object
  * @param {string} occupation From quotes object
+ * 
+ * @returns {html}
  */
 const occupationHtml = (occupation) => {
     if (occupation !== undefined) {
@@ -66,6 +69,8 @@ const occupationHtml = (occupation) => {
 /**
  * Add citation if is present in object
  * @param {string} citation From quotes object
+ * 
+ * @returns {html}
  */
 const citationHtml = (citation) => {
     if (citation !== undefined) {
@@ -74,9 +79,12 @@ const citationHtml = (citation) => {
         return '';
     }
 }
+
 /**
  * Add year if is present in object
  * @param {string} year From quotes object
+ * 
+ * @returns {html}
  */
 const yearHtml = (year) => {
     if (year !== undefined) {
@@ -85,6 +93,20 @@ const yearHtml = (year) => {
         return '';
     }
 }
+
+/**
+ * Add YTLink if is present in object
+ * @param {string} ytLink From quotes object
+ * 
+ * @returns {html}
+ */
+const ytLinkHtml = (ytLink) => {
+  if (ytLink !== undefined) {
+    return `<p class="yt-link"><a href="${ytLink}" target="_blank">▶️ Hear the text read on youtube</a></p>`;
+  } else {
+    return "";
+  }
+};
 
 
 /***

@@ -4,10 +4,11 @@
   * Quotes object consist of: 
   *     quote:  What's been said. (required)
   *     source: Who said it. (required)
+  *     occupation: What the person did (optional)
   *     citation: What the source did (optional)
   *     citation: Where it was said. (optional)
   *     year:  When it was said. (optional)
-  *     link: Where to hear this being said. (optional)
+  *     YTLink: Where to hear this being said. (optional)
   */
 
 const quotes = [
@@ -18,7 +19,7 @@ const quotes = [
     occupation: "American aviator",
     citation: undefined,
     year: undefined,
-    link: "https://youtu.be/Wj7Q4_Oabuc?t=22",
+    YTLink: "https://youtu.be/Wj7Q4_Oabuc?t=22",
   },
   {
     quote:
@@ -27,7 +28,7 @@ const quotes = [
     occupation: "American Film Actor",
     citation: undefined,
     year: undefined,
-    link: "https://youtu.be/Wj7Q4_Oabuc?t=76",
+    YTLink: "https://youtu.be/Wj7Q4_Oabuc?t=76",
   },
   {
     quote: "It is far better to be alone, than to be in bad company.",
@@ -35,7 +36,7 @@ const quotes = [
     occupation: "1st US President",
     citation: undefined,
     year: undefined,
-    link: undefined,
+    YTLink: undefined,
   },
   {
     quote: "The unexamined life is not worth living",
@@ -43,7 +44,7 @@ const quotes = [
     occupation: "Greek philosopher",
     citation: "Socrates at his trial",
     year: "399 BC",
-    link: "https://youtu.be/1mZYOhYDQog?t=21",
+    YTLink: "https://youtu.be/1mZYOhYDQog?t=21",
   },
   {
     quote:
@@ -52,7 +53,7 @@ const quotes = [
     occupation: "Athenian philosopher",
     citation: undefined,
     year: undefined,
-    link: "https://youtu.be/1mZYOhYDQog?t=28",
+    YTLink: "https://youtu.be/1mZYOhYDQog?t=28",
   },
   {
     quote:
@@ -61,6 +62,6 @@ const quotes = [
     occupation: "Greek philosopher",
     citation: undefined,
     year: undefined,
-    link: "https://youtu.be/1mZYOhYDQog?t=42",
+    YTLink: "https://youtu.be/1mZYOhYDQog?t=42",
   },
 ];
