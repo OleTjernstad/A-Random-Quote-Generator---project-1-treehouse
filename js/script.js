@@ -33,12 +33,57 @@ const getRandomNumber = (max) => {
   return Math.floor(Math.random() * max);
 }
 
-/***
- * `printQuote` function
-***/
 
+
+/**
+ * Print the quote to the quote-box
+ */
 const printQuote = () => {
-  
+  const quoteBox = document.getElementById("quote-box");
+
+  const quote = getRandomQuote();
+
+  quoteBox.innerHTML = `<p class="quote"> ${quote.quote} </p>
+  <p class="source"> ${quote.source}
+    ${occupationHtml(quote.occupation)}
+    ${citationHtml(quote.citation)}
+    ${yearHtml(quote.year)}
+  </p>`;
+}
+
+/**
+ * Add occupation if is present in object
+ * @param {string} occupation From quotes object
+ */
+const occupationHtml = (occupation) => {
+    if (occupation !== undefined) {
+        return `<span class="occupation"> | ${occupation} </span>`;
+    } else {
+        return "";
+    }
+};
+
+/**
+ * Add citation if is present in object
+ * @param {string} citation From quotes object
+ */
+const citationHtml = (citation) => {
+    if (citation !== undefined) {
+        return `<span class="citation">${citation} </span>`;
+    } else {
+        return '';
+    }
+}
+/**
+ * Add year if is present in object
+ * @param {string} year From quotes object
+ */
+const yearHtml = (year) => {
+    if (year !== undefined) {
+        return `<span class="year">${year} </span>`;
+    } else {
+        return '';
+    }
 }
 
 
@@ -48,3 +93,4 @@ const printQuote = () => {
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+printQuote(); // start the page with a random quote

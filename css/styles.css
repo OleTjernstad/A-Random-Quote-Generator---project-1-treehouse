@@ -101,7 +101,7 @@ h1 {
   content: "—";
 }
 
-.citation {
+.citation, .occupation {
   font-style: italic;
 }
 
