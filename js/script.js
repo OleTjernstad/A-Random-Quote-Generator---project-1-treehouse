@@ -102,7 +102,7 @@ const yearHtml = (year) => {
  */
 const ytLinkHtml = (ytLink) => {
   if (ytLink !== undefined) {
-    return `<p class="yt-link"><a href="${ytLink}" target="_blank">▶️ Hear the text read on youtube</a></p>`;
+    return `<p class="yt-link"><a href="${ytLink}" target="_blank">▶️ Hear the quote read on youtube</a></p>`;
   } else {
     return "";
   }
