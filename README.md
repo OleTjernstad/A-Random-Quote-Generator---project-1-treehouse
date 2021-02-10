@@ -16,4 +16,4 @@
 - [x] At least one object has at least one additional property, such as tags.
 - [x] At least one additional property prints to the page with the its quote.
 - [ ] Quotes automatically refresh at regular intervals.
-- [ ] Background color changes to a random color each time the quote refreshes.
+- [x] Background color changes to a random color each time the quote refreshes.
