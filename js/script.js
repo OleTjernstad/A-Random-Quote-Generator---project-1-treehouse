@@ -12,10 +12,16 @@ project 1 - A Random Quote Generator
 /***
  * `getRandomQuote` function
 ***/
+/**
+ * Function for getting random quote from quotes array
+ *  
+ * @returns {quote object}
+ */
 const getRandomQuote = () => {
-  const quotesKey = _getRandomNumber(quotes.length);
+  const quotesKey = getRandomNumber(quotes.length);
   return quotes[quotesKey];
 }
+
 /**
  * Get random number between 0 and max
  * 
@@ -23,13 +29,17 @@ const getRandomQuote = () => {
  * 
  * @returns {number} returns number between 0 and max
  */
-const _getRandomNumber = (max) => {
+const getRandomNumber = (max) => {
   return Math.floor(Math.random() * max);
 }
 
 /***
  * `printQuote` function
 ***/
+
+const printQuote = () => {
+  
+}
 
 
 /***
