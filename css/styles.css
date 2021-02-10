@@ -101,6 +101,16 @@ h1 {
   content: "—";
 }
 
+.yr-link-href {
+  color: #fff;
+}
+.yr-link-href:hover {
+  color: #aaaaaaaa;
+}
+.yr-link-href {
+  color: #fff;
+}
+
 .citation, .occupation {
   font-style: italic;
 }

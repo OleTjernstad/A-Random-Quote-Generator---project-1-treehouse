@@ -33,23 +33,35 @@ const getRandomNumber = (max) => {
   return Math.floor(Math.random() * max);
 }
 
-
+/**
+ * Change to a random background color on body
+ */
+const setRandomBackgroundColor = () => {
+    document.body.style.backgroundColor = `
+    rgb(
+        ${getRandomNumber(255)}, 
+        ${getRandomNumber(255)}, 
+        ${getRandomNumber(255)}
+    )`;
+}
 
 /**
  * Print the quote to the quote-box
  */
 const printQuote = () => {
-  const quoteBox = document.getElementById("quote-box");
+    setRandomBackgroundColor(); // change background color when the quote changes
+    const quoteBox = document.getElementById("quote-box");
 
-  const quote = getRandomQuote();
+    const quote = getRandomQuote();
 
-  quoteBox.innerHTML = `<p class="quote"> ${quote.quote} </p>
-  <p class="source"> ${quote.source}
-    ${occupationHtml(quote.occupation)}
-    ${citationHtml(quote.citation)}
-    ${yearHtml(quote.year)}
-  </p>
-  ${ytLinkHtml(quote.YTLink)}`;
+    quoteBox.innerHTML = `
+    <p class="quote"> ${quote.quote} </p>
+    <p class="source"> ${quote.source}
+        ${occupationHtml(quote.occupation)}
+        ${citationHtml(quote.citation)}
+        ${yearHtml(quote.year)}
+    </p>
+    ${ytLinkHtml(quote.YTLink)}`;
 }
 
 /**
@@ -102,7 +114,7 @@ const yearHtml = (year) => {
  */
 const ytLinkHtml = (ytLink) => {
   if (ytLink !== undefined) {
-    return `<p class="yt-link"><a href="${ytLink}" target="_blank">▶️ Hear the quote read on youtube</a></p>`;
+    return `<p class="yt-link"><a href="${ytLink}" class="yr-link-href" target="_blank">▶️ Hear the quote read on youtube</a></p>`;
   } else {
     return "";
   }
