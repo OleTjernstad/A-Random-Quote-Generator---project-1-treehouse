@@ -76,22 +76,24 @@ const optionalHtml = (prop, cssClass) => {
  * @returns {html}
  */
 const ytLinkHtml = (ytLink) => {
-  if (ytLink !== undefined) {
-    return `<p class="yt-link"><a href="${ytLink}" class="yr-link-href" target="_blank">▶️ Hear the quote read on youtube</a></p>`;
-  } else {
-    return "";
-  }
+    if (ytLink !== undefined) {
+        return `<p class="yt-link">
+                    <a href="${ytLink}" class="yr-link-href" target="_blank">▶️ Hear the quote read on youtube</a>
+                </p>`;
+    } else {
+        return "";
+    }
 };
 
 /**
  * Init the script to print a quote and then set a timer to repeat
  */
 const init = () => {
-  printQuote(); // start the page with a random quote
+    printQuote(); // start the page with a random quote
 
-  setTimeout(() => {
-    init(); // automatic change quote
-  }, 10000);
+    setTimeout(() => {
+        init(); // automatic change quote
+    }, 10000);
 };
 
 init();
