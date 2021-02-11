@@ -47,54 +47,27 @@ const printQuote = () => {
     quoteBox.innerHTML = `
     <p class="quote"> ${quote.quote} </p>
     <p class="source"> ${quote.source}
-        ${occupationHtml(quote.occupation)}
-        ${citationHtml(quote.citation)}
-        ${yearHtml(quote.year)}
+        ${optionalHtml(quote.occupation, "occupation")}
+        ${optionalHtml(quote.citation, "citation")}
+        ${optionalHtml(quote.year, "year")}
     </p>
     ${ytLinkHtml(quote.YTLink)}`;
 }
 
 /**
- * Add occupation if is present in object
- * @param {string} occupation From quotes object
+ * Add optional property if is present in object
+ * @param {string} prop value from quotes object
+ * @param {string} cssClass class for styling
  * 
  * @returns {html}
  */
-const occupationHtml = (occupation) => {
-    if (occupation !== undefined) {
-        return `<span class="occupation"> | ${occupation} </span>`;
+const optionalHtml = (prop, cssClass) => {
+    if (prop !== undefined) {
+        return `<span class="${cssClass}"> ${prop} </span>`;
     } else {
         return "";
     }
 };
-
-/**
- * Add citation if is present in object
- * @param {string} citation From quotes object
- * 
- * @returns {html}
- */
-const citationHtml = (citation) => {
-    if (citation !== undefined) {
-        return `<span class="citation">${citation} </span>`;
-    } else {
-        return '';
-    }
-}
-
-/**
- * Add year if is present in object
- * @param {string} year From quotes object
- * 
- * @returns {html}
- */
-const yearHtml = (year) => {
-    if (year !== undefined) {
-        return `<span class="year">${year} </span>`;
-    } else {
-        return '';
-    }
-}
 
 /**
  * Add YTLink if is present in object
