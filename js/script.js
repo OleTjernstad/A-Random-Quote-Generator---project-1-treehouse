@@ -83,8 +83,18 @@ const ytLinkHtml = (ytLink) => {
   }
 };
 
-printQuote(); // start the page with a random quote
+/**
+ * Init the script to print a quote and then set a timer to repeat
+ */
+const init = () => {
+  printQuote(); // start the page with a random quote
 
+  setTimeout(() => {
+    init(); // automatic change quote
+  }, 10000);
+};
+
+init();
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
